@@ -1,5 +1,5 @@
 kotlin {
-    jvm()
+    val jvm = jvm()
     sourceSets {
         val jvmMain by getting {
             dependencies {
@@ -11,6 +11,10 @@ kotlin {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
+        }
+        val jvmDoc by creating {
+            kotlin.srcDir("src/jvmDoc/kotlin")
+            dependsOn(jvmMain)
         }
     }
 }
