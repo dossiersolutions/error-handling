@@ -1,5 +1,3 @@
-version = "0.1"
-
 kotlin {
     val jvm = jvm()
     sourceSets {
