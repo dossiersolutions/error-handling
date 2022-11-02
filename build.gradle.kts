@@ -123,7 +123,6 @@ tasks {
 
 signing {
     val signingKey = System.getenv("GPG_SIGNING_KEY")?.let { String(Base64.getDecoder().decode(it)) }
-    println(signingKey)
     val signingPassphrase = System.getenv("GPG_SIGNING_PASSPHRASE")
 
     useInMemoryPgpKeys(signingKey, signingPassphrase)
